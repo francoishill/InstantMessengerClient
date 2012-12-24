@@ -77,23 +77,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\SharedClasses\CalledFromService.cs">
+    <Compile Include="..\..\SharedClasses\CalledFromService.cs">
       <Link>CalledFromService.cs</Link>
     </Compile>
-    <Compile Include="..\SharedClasses\InstantMessengerShared.cs">
+    <Compile Include="..\..\SharedClasses\InstantMessengerShared.cs">
       <Link>InstantMessengerShared.cs</Link>
     </Compile>
-    <Compile Include="..\SharedClasses\SettingsInterop.cs">
+    <Compile Include="..\..\SharedClasses\SettingsInterop.cs">
       <Link>SettingsInterop.cs</Link>
     </Compile>
-    <Compile Include="..\SharedClasses\ThreadingInterop.cs">
+    <Compile Include="..\..\SharedClasses\ThreadingInterop.cs">
       <Link>ThreadingInterop.cs</Link>
     </Compile>
-    <Compile Include="..\SharedClasses\UserMessages.cs">
+    <Compile Include="..\..\SharedClasses\UserMessages.cs">
       <Link>UserMessages.cs</Link>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="..\SharedClasses\UserMessages.designer.cs">
+    <Compile Include="..\..\SharedClasses\UserMessages.designer.cs">
       <Link>UserMessages.designer.cs</Link>
       <DependentUpon>UserMessages.cs</DependentUpon>
     </Compile>
@@ -119,7 +119,7 @@
     <Compile Include="TalkForm.Designer.cs">
       <DependentUpon>TalkForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="..\SharedClasses\UserMessages.resx">
+    <EmbeddedResource Include="..\..\SharedClasses\UserMessages.resx">
       <Link>UserMessages.resx</Link>
       <DependentUpon>UserMessages.cs</DependentUpon>
     </EmbeddedResource>
