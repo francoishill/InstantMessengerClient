@@ -12,11 +12,11 @@ using System.Threading;
 
 namespace InstantMessenger
 {
-	public partial class Form1 : Form
+	public partial class MainForm : Form
 	{
 		IMClient im = new IMClient();
 
-		public Form1()
+		public MainForm()
 		{
 			InitializeComponent();
 
@@ -233,6 +233,15 @@ namespace InstantMessenger
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			talkButton.Enabled = comboBox1.SelectedIndex != -1;
+		}
+
+		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			AboutWindow2.ShowAboutWindow(new System.Collections.ObjectModel.ObservableCollection<DisplayItem>()
+            {
+                new DisplayItem("Author", "Francois Hill"),
+                new DisplayItem("Icon(s) obtained from", null)
+            });
 		}
 	}
 }
