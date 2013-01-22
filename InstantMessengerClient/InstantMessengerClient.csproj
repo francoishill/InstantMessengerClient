@@ -68,6 +68,9 @@
     <ApplicationIcon>app.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell">
+      <HintPath>..\..\..\DLLs\Windows API\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -97,8 +100,14 @@
     <Compile Include="..\..\SharedClasses\CalledFromService.cs">
       <Link>CalledFromService.cs</Link>
     </Compile>
+    <Compile Include="..\..\SharedClasses\CompareObjects.cs">
+      <Link>CompareObjects.cs</Link>
+    </Compile>
     <Compile Include="..\..\SharedClasses\DeveloperCommunication.cs">
       <Link>DeveloperCommunication.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\EncodeAndDecodeInterop.cs">
+      <Link>EncodeAndDecodeInterop.cs</Link>
     </Compile>
     <Compile Include="..\..\SharedClasses\fastJSON.cs">
       <Link>fastJSON.cs</Link>
@@ -106,8 +115,25 @@
     <Compile Include="..\..\SharedClasses\FeedbackMessageTypes.cs">
       <Link>FeedbackMessageTypes.cs</Link>
     </Compile>
+    <Compile Include="..\..\SharedClasses\Generics.cs">
+      <Link>Generics.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\InputBoxWPF.xaml.cs">
+      <Link>InputBoxWPF.xaml.cs</Link>
+      <DependentUpon>InputBoxWPF.xaml</DependentUpon>
+    </Compile>
     <Compile Include="..\..\SharedClasses\InstantMessengerShared.cs">
       <Link>InstantMessengerShared.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\Logging.cs">
+      <Link>Logging.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\MiniDownloadBarForm.cs">
+      <Link>MiniDownloadBarForm.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\MiniDownloadBarForm.designer.cs">
+      <Link>MiniDownloadBarForm.designer.cs</Link>
+      <DependentUpon>MiniDownloadBarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="..\..\SharedClasses\ProcessesInterop.cs">
       <Link>ProcessesInterop.cs</Link>
@@ -120,6 +146,9 @@
     </Compile>
     <Compile Include="..\..\SharedClasses\SettingsInterop.cs">
       <Link>SettingsInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\SettingsSimple.cs">
+      <Link>SettingsSimple.cs</Link>
     </Compile>
     <Compile Include="..\..\SharedClasses\ThreadingInterop.cs">
       <Link>ThreadingInterop.cs</Link>
@@ -135,6 +164,15 @@
     <Compile Include="..\..\SharedClasses\UserMessages.designer.cs">
       <Link>UserMessages.designer.cs</Link>
       <DependentUpon>UserMessages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\WebInterop.cs">
+      <Link>WebInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\Windows7JumpListsInterop.cs">
+      <Link>Windows7JumpListsInterop.cs</Link>
+    </Compile>
+    <Compile Include="..\..\SharedClasses\WPFdraggableCanvas.cs">
+      <Link>WPFdraggableCanvas.cs</Link>
     </Compile>
     <Compile Include="IMClient.cs" />
     <Compile Include="MainForm.cs">
@@ -158,6 +196,10 @@
     <Compile Include="TalkForm.Designer.cs">
       <DependentUpon>TalkForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="..\..\SharedClasses\MiniDownloadBarForm.resx">
+      <Link>MiniDownloadBarForm.resx</Link>
+      <DependentUpon>MiniDownloadBarForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="..\..\SharedClasses\UserMessages.resx">
       <Link>UserMessages.resx</Link>
       <DependentUpon>UserMessages.cs</DependentUpon>
@@ -198,6 +240,11 @@
   <ItemGroup>
     <Page Include="..\..\SharedClasses\AboutWindow2.xaml">
       <Link>AboutWindow2.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="..\..\SharedClasses\InputBoxWPF.xaml">
+      <Link>InputBoxWPF.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
