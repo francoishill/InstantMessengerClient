@@ -13,10 +13,11 @@ namespace InstantMessenger
         [STAThread]
         static void Main()
         {
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+
 			SharedClasses.AutoUpdating.CheckForUpdates_ExceptionHandler();
 
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());
         }
     }
